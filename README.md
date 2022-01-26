@@ -8,11 +8,9 @@ Kivy >= 1.0.6
 
 # Usage
 Folder containing large pool of images (change required): 
-
 `sourceImageFolder = 'foldername'`
 
 Class folder names and their respective keyboard shortcuts (change required):
-
 ```
 key_dict = {
     'w': 'Folder 1',
@@ -32,5 +30,4 @@ key_dict = {
 ```
 
 Keyboard shortcuts:
-
 `'w', 'a', 's', 'd', 'f', 'g', 'u', 'q', 'e'`
