@@ -13,14 +13,14 @@ Folder containing large pool of images:
 
 Class folder names and their respective keyboard shortcuts:
 
-`key_dict = {
-    'w': 'Folder 1',
-    'a': 'Folder 2',
-    's': 'Folder 3',
-    'd': 'Folder 4',
-    'f': 'Folder 5',
-    'g': 'Folder 6',
-    'u': 'Folder 7',
+`key_dict = { <br>
+    'w': 'Folder 1', <br>
+    'a': 'Folder 2', <br> 
+    's': 'Folder 3', <br>
+    'd': 'Folder 4', <br>
+    'f': 'Folder 5', <br>
+    'g': 'Folder 6', <br>
+    'u': 'Folder 7', <br>
 }`
 
 Keyboard shortcuts:
