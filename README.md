@@ -7,21 +7,27 @@ Python >= 2.7 <br>
 Kivy >= 1.0.6
 
 # Usage
-Folder containing large pool of images: 
+Folder containing large pool of images (change required): 
 
 `sourceImageFolder = 'foldername'`
 
-Class folder names and their respective keyboard shortcuts:
+Class folder names and their respective keyboard shortcuts (change required):
 
 ```
-key_dict = { <br>
-    'w': 'Folder 1', <br>
-    'a': 'Folder 2', <br> 
-    's': 'Folder 3', <br>
-    'd': 'Folder 4', <br>
-    'f': 'Folder 5', <br>
-    'g': 'Folder 6', <br>
-    'u': 'Folder 7', <br>
+key_dict = {
+    'w': 'Folder 1',
+    'a': 'Folder 2',
+    's': 'Folder 3',
+    'd': 'Folder 4',
+    'f': 'Folder 5',
+    'g': 'Folder 6',
+    'u': 'Folder 7',
+            .
+            .
+            .
+    
+    'q': 'Folder n',
+    'e': 'Folder n+1',
 }
 ```
 
