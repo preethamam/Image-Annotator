@@ -33,4 +33,4 @@ key_dict = {
 
 Keyboard shortcuts:
 
-`'w', 'a', 's', 'd', 'f', 'g', 'u'`
+`'w', 'a', 's', 'd', 'f', 'g', 'u', 'q', 'e'`
