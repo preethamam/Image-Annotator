@@ -1,16 +1,31 @@
 '''
-ImageLabeler
-A simple and light weight Python Kivy based software tool to label the multiclase images contained in a folder to class folders. 
-This tool is best suited for image labeling/annotation for classification problem.
+%//%************************************************************************%
+%//%*                         ImageLabeler		     				       *%
+%//%*           A simple and light weight Python Kivy based software       *%
+%//%*           tool to label the multiclass images contained in a         *%
+%//%*           folder to respective class folders. This tool is best      *%
+%//%*           suited for image labeling/annotation for                   *%
+%//%*           classification problem.                                    *%
+%//%*                                                                      *%
+%//%*           Authors: Preetham Manjunatha, Ph.D.                        *%
+%//%*                    Zhiye Lu                     		               *%
+%//%*           Github link: https://github.com/preethamam                 *%
+%//%*           Submission Date: 01/26/2022                                *%
+%//%************************************************************************%
+%//%*           Viterbi School of Engineering,                             *%
+%//%*           Sonny Astani Dept. of Civil Engineering,                   *%
+%//%*           Department of Computer Science                             *%
+%//%*           Ming Hsieh Department of Electrical and                    *%
+%//%*           Computer Engineering                                       *%
+%//%*           University of Southern california,                         *%
+%//%*           Los Angeles, California.                                   *%
+%//%************************************************************************%
 
 Requirements
+---------------------
 Tested on Windows 10
 Python >= 2.7
 Kivy >= 1.0.6
-
-Authors:
-    Preetham Manjunatha
-    Zhiye Lu
 '''
 import kivy
 
