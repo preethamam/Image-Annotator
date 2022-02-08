@@ -17,7 +17,7 @@ Kivy >= 2.0.0
 # Installation procedure
 
 Step 1: Install Python. It is important to have the right version of Python. To check the correct version of Python, we have the command
-`pyhton -- version`
+`python -- version`
 It is important to have the right version of python as detailed in the link below:
 https://kivy.org/doc/stable/gettingstarted/installation.html#install-pip
 
