@@ -1,10 +1,14 @@
 # ImageLabeler
 A simple and light weight Python Kivy based software tool to label the multiclase images contained in a folder to class folders. This tool is best suited for image labeling/annotation for classification problem.
 
+-----
+
 # Requirements 
 Tested on Windows 10 <br>
 Python >= 2.7 <br>
 Kivy >= 1.0.6
+
+-----
 
 # Usage
 Folder containing large pool of images (change required): 
