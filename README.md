@@ -8,10 +8,13 @@ Tested on Windows 10 <br>
 Python >= 2.7 <br>
 Kivy >= 1.0.6
 
-Tested on Ubuntu <br>
+Tested on Ubuntu 16.04 <br>
 Python >= 3.9.7 <br>
 Kivy >= 2.0.0
 
+Tested on macOS 12.2 <br>
+Python >= 3.9.7 <br>
+Kivy >= 2.0.0
 -----
 
 # Installation procedure
