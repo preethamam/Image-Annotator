@@ -14,6 +14,22 @@ Kivy >= 2.0.0
 
 -----
 
+# Installation procedure
+
+Step 1: Install Python. It is important to have the right version of Python. To check the correct version of Python, we have the command
+'pyhton -- version'
+It is important to have the right version of python as detailed in the link below:
+https://kivy.org/doc/stable/gettingstarted/installation.html#install-pip
+
+Step 2: Install kivy using the pip library. 
+Command: 'pip install kivy'
+
+Step 3: Execute the main.py file on the corresponding terminal. Ensure that the folder is pointing to the right path
+
+
+-----
+
+
 # Usage
 Folder containing large pool of images (change required): 
 `sourceImageFolder = 'foldername'`
