@@ -8,7 +8,7 @@ Tested on Windows 10 <br>
 Python >= 2.7 <br>
 Kivy >= 1.0.6
 
-Tested on Windows 10 <br>
+Tested on Ubuntu <br>
 Python >= 3.9.7 <br>
 Kivy >= 2.0.0
 
