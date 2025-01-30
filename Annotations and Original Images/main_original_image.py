@@ -1,4 +1,4 @@
-'''
+"""
 %//%************************************************************************%
 %//%*                         ImageLabeler		     				       *%
 %//%*           A simple and light weight Python Kivy based software       *%
@@ -26,7 +26,7 @@ Requirements
 Tested on Windows 10
 Python >= 2.7
 Kivy >= 1.0.6
-'''
+"""
 
 import datetime
 import ntpath
@@ -46,20 +46,19 @@ from kivy.uix.image import Image
 from kivy.uix.scatter import Scatter
 from kivy.uix.widget import Widget
 
-kivy.require('1.10.1')
+kivy.require("1.10.1")
 
 
 curdir = dirname(__file__)
-print (curdir)
-sourceImageFolder = r'U:\Project MegaCRACK-RoboCRACK\Real World Data\USCPavCon\Third_Rework\B4_B_redo_Pav'
-originalImageFolder = r"U:\Project MegaCRACK-RoboCRACK\Real World Data\USCPavCon\Original Set 00 - Mixed\Original Crack - Shravan-Vinay Unlabeled"
-
+print(curdir)
+sourceImageFolder = r"C:\Users\Preetham\Downloads\Alligator55"
+originalImageFolder = r"H:\Project MegaCRACK-RoboCRACK\Real World Data\Comparision Paper\Testing\Semantic Segmentation\Dataset 3 - Cracks-676\Cracks"
 key_dict = {
-    'a': r'U:\Project MegaCRACK-RoboCRACK\Real World Data\USCPavCon\Third_Rework\good', 
-    's': r'U:\Project MegaCRACK-RoboCRACK\Real World Data\USCPavCon\Third_Rework\bad',
-    'q': 'B3_B_good_pav',
-    'w': 'B3_B_redo_pav',
-    'n': 'B3_B_noncrack'
+    "a": r"H:\Project MegaCRACK-RoboCRACK\Real World Data\Comparision Paper\Testing\Semantic Segmentation\Dataset 3 - Cracks-676\good",
+    "s": r"H:\Project MegaCRACK-RoboCRACK\Real World Data\Comparision Paper\Testing\Semantic Segmentation\Dataset 3 - Cracks-676\bad",
+    "q": "",
+    "w": "",
+    "n": "",
 }
 
 
@@ -95,17 +94,17 @@ class PicturesFrame(Widget):
         self.restart()
 
     def restart(self):
-        self.picture_past.source = ''
-        self.picture_1.source = ''
-        self.picture_2.source = ''
-        self.picture_3.source = ''
+        self.picture_past.source = ""
+        self.picture_1.source = ""
+        self.picture_2.source = ""
+        self.picture_3.source = ""
 
         self.src = ""
         self.dst = ""
         self.nextNameIter = self.next_image_name_generator()
         self.display_next_image()
         self.display_next_image()
-        self.pastLabel.text = 'start'
+        self.pastLabel.text = "start"
 
     def _keyboard_closed(self):
         self._keyboard.unbind(on_key_down=self._on_keyboard_down)
@@ -115,26 +114,29 @@ class PicturesFrame(Widget):
         # do not log command+q
         if modifiers != []:
             return
-        if keycode[1] in key_dict or keycode[1] == 'z':
+        if keycode[1] in key_dict or keycode[1] == "z":
             self.key_pressed(keycode[1])
-        if keycode[1] == 'enter':            
+        if keycode[1] == "enter":
             self.key_pressed(keycode[1])
 
     def next_image_name_generator(self):
         # print("reading: ", join(sourceImageFolder, '*'))
-        for fileName in glob(join(sourceImageFolder, '*')):   
+        for fileName in glob(join(sourceImageFolder, "*")):
             yield ntpath.basename(fileName)
 
     def source_image_name_to_path(self, image_name, folder_name):
         return join(folder_name, image_name)
 
-    default_pic_size = [640,480]
-    def display_next_image(self, dstFolderName = ''):
+    default_pic_size = [640, 480]
+
+    def display_next_image(self, dstFolderName=""):
         try:
             self.picture_past.source = self.picture_1.source
             self.picture_past.pic.size = self.default_pic_size
             self.picture_past.center = self.picture_past_center
-            self.picture_past.labelText.text = dstFolderName + ' - ' + basename(self.picture_1.source)
+            self.picture_past.labelText.text = (
+                dstFolderName + " - " + basename(self.picture_1.source)
+            )
             self.picture_past.labelText.top = 390
 
             self.pastLabel.text = dstFolderName
@@ -142,49 +144,56 @@ class PicturesFrame(Widget):
             self.picture_1.center = self.picture_1_center
             self.picture_1.labelText.text = basename(self.picture_1.source)
             self.picture_1.pic.size = self.default_pic_size
-            self.picture_1.pic.scale = 2            
+            self.picture_1.pic.scale = 2
 
-            self.picture_2.source = self.source_image_name_to_path(next(self.nextNameIter), sourceImageFolder)
+            self.picture_2.source = self.source_image_name_to_path(
+                next(self.nextNameIter), sourceImageFolder
+            )
             self.picture_2.center = self.picture_2_center
             self.picture_2.labelText.text = basename(self.picture_2.source)
             self.picture_2.pic.size = self.default_pic_size
 
-            if basename(self.picture_1.source) == '':
+            if basename(self.picture_1.source) == "":
                 return
             else:
-                self.picture_3.source = self.source_image_name_to_path(basename(self.picture_1.source), originalImageFolder)
+                self.picture_3.source = self.source_image_name_to_path(
+                    basename(self.picture_1.source), originalImageFolder
+                )
                 if os.path.isfile(self.picture_3.source):
                     return
                 else:
                     file_name = os.path.splitext(basename(self.picture_1.source))[0]
-                    self.picture_3.source = self.source_image_name_to_path(file_name + '.png', originalImageFolder)
-                    
-            
-            self.picture_3.center = self.picture_3_center       
+                    self.picture_3.source = self.source_image_name_to_path(
+                        file_name + ".png", originalImageFolder
+                    )
+
+            self.picture_3.center = self.picture_3_center
             self.picture_3.labelText.text = basename(self.picture_1.source)
             self.picture_3.pic.size = self.default_pic_size
             self.picture_3.pic.scale = 2
-                        
+
         except StopIteration as e:
-            
-            self.picture_3.source = self.source_image_name_to_path(basename(self.picture_2.source), originalImageFolder)
+            self.picture_3.source = self.source_image_name_to_path(
+                basename(self.picture_2.source), originalImageFolder
+            )
             if os.path.isfile(self.picture_3.source):
                 return
             else:
                 file_name = os.path.splitext(basename(self.picture_2.source))[0]
-                self.picture_3.source = self.source_image_name_to_path(file_name + '.png', originalImageFolder)       
-            self.picture_3.center = self.picture_3_center       
+                self.picture_3.source = self.source_image_name_to_path(
+                    file_name + ".png", originalImageFolder
+                )
+            self.picture_3.center = self.picture_3_center
             self.picture_3.labelText.text = basename(self.picture_1.source)
             self.picture_3.pic.size = self.default_pic_size
             self.picture_3.pic.scale = 2
-            
+
             print("no more images")
 
     def key_pressed(self, key):
-        
-        if key[0] == 'z':
-            print('reverse')
-            if self.dst == '':
+        if key[0] == "z":
+            print("reverse")
+            if self.dst == "":
                 return
             move_file(self.dst, self.src)
             self.restart()
@@ -200,9 +209,10 @@ class PicturesFrame(Widget):
             move_file(src_path, dst_path)
 
         # Next image
-        if key == 'enter':
-            print('Going to next image.')
+        if key == "enter":
+            print("Going to next image.")
             self.display_next_image()
+
 
 class PicturesApp(App):
     def build(self):
@@ -210,5 +220,5 @@ class PicturesApp(App):
         return frame
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     PicturesApp().run()
