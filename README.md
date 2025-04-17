@@ -66,3 +66,9 @@ Keyboard shortcuts:
 `'w', 'a', 's', 'd', 'f', 'g', 'u', 'q', 'e', 'z'`
 
 To `Undo` an action, simply use `Ctrl+Z` and `Redo` the keyboard shortcut is `Ctrl+Y`.
+
+----
+# Authors
+1. Dr. Preetham Manjunatha, Ph.D in Civil Engineering, M.S in Computer Science, M.S in Electrical Engineering and M.S in Civil Engineering, University of Southern California.
+
+2. Zhiye Lu ([ChaoyiZh](https://github.com/)), M.S in Computer Science, University of Southern California.
