@@ -71,4 +71,4 @@ To `Undo` an action, simply use `Ctrl+Z` and `Redo` by using the keyboard shortc
 # Authors
 1. Dr. Preetham Manjunatha, Ph.D in Civil Engineering, M.S in Computer Science, M.S in Electrical Engineering and M.S in Civil Engineering, University of Southern California.
 
-2. Zhiye Lu ([Zhiye](https://github.com/)), M.S in Computer Science, University of Southern California.
+2. Zhiye Lu ([Zhiye 'Ryan' Lu](https://github.com/ryanluwork)), M.S in Computer Science, University of Southern California.
