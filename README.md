@@ -57,9 +57,12 @@ key_dict = {
     
     'q': 'Folder n',
     'e': 'Folder n+1',
+    'z': 'Folder n+2',
 }
 ```
 
 After the dictionary folders are created, the files will be copied to the destination folder as per the keyboard shortcuts below
 Keyboard shortcuts:
-`'w', 'a', 's', 'd', 'f', 'g', 'u', 'q', 'e'`
+`'w', 'a', 's', 'd', 'f', 'g', 'u', 'q', 'e', 'z'`
+
+To `Undo` an action, simply use `Ctrl+Z` and `Redo` the keyboard shortcut is `Ctrl+Y`.
