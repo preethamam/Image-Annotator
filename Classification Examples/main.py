@@ -62,18 +62,9 @@ key_dict = {
 }
 
 
-def reverse():
-    pass
-
-
-def move_to_queue(folder_name):
-    pass
-
-
 def move_file(source_path, target_path):
     print("move: ", source_path, target_path)
     shutil.move(source_path, target_path)
-
 
 class Picture(Scatter):
     source = StringProperty(None)
@@ -200,7 +191,7 @@ class PicturesFrame(Widget):
             
         # Original key handling (if no modifiers)
         if not modifiers:  # Changed from modifiers == []
-            if keycode[1] in key_dict or keycode[1] == 'z':
+            if keycode[1] in key_dict:
                 self.key_pressed(keycode[1])
             if keycode[1] == 'enter':            
                 self.key_pressed(keycode[1])
@@ -215,12 +206,7 @@ class PicturesFrame(Widget):
     def source_image_name_to_path(self, image_name, folder_name):
         return join(folder_name, image_name)
 
-    def key_pressed(self, key):
-        if key[0] == 'z':
-            print('Undo (single key z pressed)')
-            self.undo_action()
-            return
-            
+    def key_pressed(self, key):            
         if key[0] in key_dict:
             src_path = self.picture_1.source
             dst_path = join(key_dict[key[0]], basename(src_path))
