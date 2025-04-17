@@ -51,11 +51,11 @@ kivy.require("1.10.1")
 
 curdir = dirname(__file__)
 print(curdir)
-sourceImageFolder = r"C:\Users\Preetham\Downloads\Alligator55"
-originalImageFolder = r"H:\Project MegaCRACK-RoboCRACK\Real World Data\Comparision Paper\Testing\Semantic Segmentation\Dataset 3 - Cracks-676\Cracks"
+sourceImageFolder = r"C:\Users\Preetham\Downloads\Dummy 2\Annotated"
+originalImageFolder = r"H:\Project MegaCRACK-RoboCRACK\Real World Data\USC PhD\Semantic Segmentation\Dataset 3 - Cracks-676\Cracks"
 key_dict = {
-    "a": r"H:\Project MegaCRACK-RoboCRACK\Real World Data\Comparision Paper\Testing\Semantic Segmentation\Dataset 3 - Cracks-676\good",
-    "s": r"H:\Project MegaCRACK-RoboCRACK\Real World Data\Comparision Paper\Testing\Semantic Segmentation\Dataset 3 - Cracks-676\bad",
+    "a": r"C:\Users\Preetham\Downloads\Dummy 2\Good",
+    "s": r"C:\Users\Preetham\Downloads\Dummy 2\Bad",
     "q": "",
     "w": "",
     "n": "",
@@ -192,7 +192,7 @@ class PicturesFrame(Widget):
 
     def key_pressed(self, key):
         if key[0] == "z":
-            print("reverse")
+            print("Undo (reverse)")
             if self.dst == "":
                 return
             move_file(self.dst, self.src)

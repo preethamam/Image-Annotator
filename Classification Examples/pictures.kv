@@ -18,41 +18,48 @@ FloatLayout:
         height: 44
 
 <PicturesFrame>:
-    picture_1:picture_1
-    picture_1_center: (root.width/8*2,root.height/4*3)
-    picture_2:picture_2
-    picture_2_center: (root.width/8*6,root.height/4*3)
-    picture_past:picture_past
-    picture_past_center: (root.width/8*6,root.height/5)
-    pastLabel:pastLabel
+    picture_1: picture_1
+    picture_1_center: (root.width * 0.35, root.height * 0.5)  # Center of left panel
+    picture_2: picture_2
+    picture_2_center: (root.width * 0.85, root.height * 0.75)  # Top of right panel
+    picture_past: picture_past
+    picture_past_center: (root.width * 0.85, root.height * 0.25)  # Bottom of right panel
+    counter_label: counter_label
+    
     canvas:
+        # Vertical dividing line
+        Color:
+            rgba: 1, 1, 1, 1
         Rectangle:
-            pos: self.center_x-5, 0
-            size: 10, self.height
-
-
+            pos: root.width * 0.7, 0
+            size: 2, root.height
+            
+    # Main image (left panel)
     Picture:
         id: picture_1
-#        pos:(100,300)
         center: root.picture_1_center
+        size_hint: None, None
 
+    # Next image (top right)
     Picture:
         id: picture_2
         center: root.picture_2_center
+        size_hint: None, None
 
+    # Past image (bottom right)
     Picture:
         id: picture_past
         center: root.picture_past_center
+        size_hint: None, None
 
+    # Counter label at bottom left
     Label:
-        id: pastLabel
-        font_size: 120
-        text: 'start'
-        center: (root.width/8*2,root.height/4)
-
-
-
- 
+        id: counter_label
+        font_size: 40
+        text: '1/1'
+        pos: 20, 20
+        size_hint: None, None
+        size: self.texture_size
 
 <Picture>:
     # each time a picture is created, the image can delay the loading
@@ -71,9 +78,13 @@ FloatLayout:
         source: root.source
 
         # create initial image to be 400 pixels width
-        size: 640, 640 / self.image_ratio
+        # size: 640, 640 / self.image_ratio
+        size: 640, int(640 / self.image_ratio) if self.image_ratio and self.image_ratio > 0 else 640
 
         allow_stretch: True
+
+        # Add this binding to handle texture loading
+        on_texture: root.parent.update_image_size(root) if root.parent and hasattr(root.parent, 'update_image_size') else None
 
         #canvas.before:
         #    Color:
@@ -87,6 +98,6 @@ FloatLayout:
     Label:
         id: labelText
         font_size: 30
-        text: root.source
+        #text: root.source
         center_x: root.width / 2
         top: 980
