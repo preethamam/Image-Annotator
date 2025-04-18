@@ -43,7 +43,7 @@ The Folder containing large pool of images is pointed in the `config.json` file 
 Once the original folder has the right path, the next step is to create the folder with the dictionary names (keyboard keys) shown below.
 
 Class folder names and their respective keyboard shortcuts (change required):
-```
+```json
 key_dict = {
     'w': 'Folder 1',
     'a': 'Folder 2',
