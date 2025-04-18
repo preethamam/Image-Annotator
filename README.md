@@ -36,6 +36,7 @@ Step 3: Execute the main.py file on the corresponding terminal. Ensure that the 
 
 The purpose of this repository is to use the GUI of pyhton based Kivy to transfer images to a particular folder from an original folder
 
+## Python + Kivy source code
 The Folder containing large pool of images is present in the path detailed by main.py file line below: 
 `sourceImageFolder = 'foldername'`
 
@@ -66,6 +67,22 @@ Keyboard shortcuts:
 `'w', 'a', 's', 'd', 'f', 'g', 'u', 'q', 'e', 'z'`
 
 To `Undo` an action, simply use `Ctrl+Z` and `Redo` by using the keyboard shortcut `Ctrl+Y`.
+
+## Executable
+Unzip the `Executable.zip` file and use the `Image Categorize.exe`. In the Executable folder, find the `config.json` file and change the path of the source image folder in `sourceImageFolder` and `key_dict` keys and folder paths values.
+```json
+{
+    "sourceImageFolder": "H:\\Project MegaCRACK-RoboCRACK\\Real World Data\\USC PhD\\Classification\\Dataset 3 - Cracks-K (644 x 483) (Concrete and pavement)\\NoCrack",
+    "key_dict": {
+        "b": "H:\\Project MegaCRACK-RoboCRACK\\Real World Data\\USC PhD\\Classification\\Dataset 3 - Cracks-K (644 x 483) (Concrete and pavement)\\Branched",
+        "f": "H:\\Project MegaCRACK-RoboCRACK\\Real World Data\\USC PhD\\Classification\\Dataset 3 - Cracks-K (644 x 483) (Concrete and pavement)\\Few Strands",
+        "c": "H:\\Project MegaCRACK-RoboCRACK\\Real World Data\\USC PhD\\Classification\\Dataset 3 - Cracks-K (644 x 483) (Concrete and pavement)\\Nocrack Concrete",
+        "p": "H:\\Project MegaCRACK-RoboCRACK\\Real World Data\\USC PhD\\Classification\\Dataset 3 - Cracks-K (644 x 483) (Concrete and pavement)\\Nocrack Pavement",
+        "s": "H:\\Project MegaCRACK-RoboCRACK\\Real World Data\\USC PhD\\Classification\\Dataset 3 - Cracks-K (644 x 483) (Concrete and pavement)\\Surface Cracks",
+        "q": "H:\\Project MegaCRACK-RoboCRACK\\Real World Data\\USC PhD\\Classification\\Dataset 3 - Cracks-K (644 x 483) (Concrete and pavement)\\Bad Images"
+    }
+}
+```
 
 ----
 # Authors
