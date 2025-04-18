@@ -1,4 +1,4 @@
-# ImageLabeler
+# Image categorization/labeler tool
 A simple and light weight Python Kivy based software tool to label the multiclass images contained in a folder to class folders. This tool is best suited for image labeling/annotation for classification problem.
 
 -----
