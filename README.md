@@ -69,7 +69,8 @@ Keyboard shortcuts:
 To `Undo` an action, simply use `Ctrl+Z` and `Redo` by using the keyboard shortcut `Ctrl+Y`.
 
 ## Executable
-Unzip the `Executable.zip` file and use the `Image Categorize.exe`. In the Executable folder, find the `config.json` file and change the path of the source image folder in `sourceImageFolder` and `key_dict` keys and folder paths values.
+Unzip the `Executable.zip` file. In the Executable folder, find the `config.json` file and change the path of the source image folder in `sourceImageFolder` and `key_dict` keys and folder paths values. After changing the relevant paths and keys, double click the executable `Image Categorize.exe`.
+
 ```json
 {
     "sourceImageFolder": "H:\\Project MegaCRACK-RoboCRACK\\Real World Data\\USC PhD\\Classification\\Dataset 3 - Cracks-K (644 x 483) (Concrete and pavement)\\NoCrack",
