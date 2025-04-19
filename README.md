@@ -42,8 +42,8 @@ The Folder containing large pool of images is pointed in the `config.json` file 
 
 Once the original folder has the right path, the next step is to create the folder with the dictionary names (keyboard keys) shown below.
 
-Class folder names and their respective keyboard shortcuts (change required):
-```json
+Class folder names and their respective keyboard shortcuts template:
+```
 key_dict = {
     'w': 'Folder 1',
     'a': 'Folder 2',
@@ -60,7 +60,10 @@ key_dict = {
     'e': 'Folder n+1',
     'z': 'Folder n+2',
 }
+```
 
+JSON file change required:
+```json
 "key_dict": {
         "b": "H:\\Project MegaCRACK-RoboCRACK\\Real World Data\\USC PhD\\Classification\\Dataset 3 - Cracks-K (644 x 483) (Concrete and pavement)\\Branched",
         "f": "H:\\Project MegaCRACK-RoboCRACK\\Real World Data\\USC PhD\\Classification\\Dataset 3 - Cracks-K (644 x 483) (Concrete and pavement)\\Few Strands",
