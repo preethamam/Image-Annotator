@@ -55,7 +55,7 @@ FloatLayout:
     # Counter label at bottom left
     Label:
         id: counter_label
-        font_size: 40
+        font_size: 20
         text: '1/1'
         pos: 20, 20
         size_hint: None, None
@@ -65,20 +65,18 @@ FloatLayout:
     # each time a picture is created, the image can delay the loading
     # as soon as the image is loaded, ensure that the center is changed
     # to the center of the screen.
-#    on_size: self.center = win.Window.center
     size: image.size
     size_hint: None, None
     center_hint: (0,0)
     source: ''
     pic: image
-    labelText:labelText
+    labelText: labelText
 
     Image:
         id: image
         source: root.source
 
         # create initial image to be 400 pixels width
-        # size: 640, 640 / self.image_ratio
         size: 640, int(640 / self.image_ratio) if self.image_ratio and self.image_ratio > 0 else 640
 
         allow_stretch: True
@@ -86,18 +84,13 @@ FloatLayout:
         # Add this binding to handle texture loading
         on_texture: root.parent.update_image_size(root) if root.parent and hasattr(root.parent, 'update_image_size') else None
 
-        #canvas.before:
-        #    Color:
-        #        rgba: 1,1,1,1
-        #    BorderImage:
-        #        source: 'shadow32.png'
-        #        border: (36,36,36,36)
-        #        size:(self.width+72, self.height+72)
-        #        pos: (-36,-36)
-
+    # Position the label at the bottom-left corner of the image
     Label:
         id: labelText
-        font_size: 30
-        #text: root.source
-        center_x: root.width / 2
-        top: 980
+        font_size: 25
+        color: 1, 1, 1, 1  # White color
+        pos: 0, -self.height  # Position below the image
+        text_size: image.width, None  # Constrain text width to image width
+        halign: 'left'  # Left-align text
+        size_hint: None, None
+        size: self.texture_size

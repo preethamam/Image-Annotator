@@ -108,11 +108,16 @@ class PicturesFrame(Widget):
         self.src = ""
         self.dst = ""
         
+        # Set labels for the images
+        self.picture_1.labelText.text = "Current image"
+        self.picture_2.labelText.text = "Next image"
+        self.picture_past.labelText.text = "Previous image"
+        
         # Reset image positions and sizes
         self.picture_1.center = self.picture_1_center
         self.picture_2.center = self.picture_2_center
-        self.picture_past.center = self.picture_past_center
-        
+        self.picture_past.center = self.picture_past_center        
+    
         self.picture_1.pic.size = self.left_image_size
         self.picture_2.pic.size = self.right_image_size
         self.picture_past.pic.size = self.right_image_size
@@ -160,8 +165,12 @@ class PicturesFrame(Widget):
         """Update image size based on which picture widget it is"""
         if picture_widget == self.picture_1:
             picture_widget.pic.size = self.left_image_size
+            # For the main (left) image - position label at bottom left but raise it up
+            picture_widget.labelText.pos = (0, 40)  # Raise the text up from the bottom
         elif picture_widget in (self.picture_2, self.picture_past):
             picture_widget.pic.size = self.right_image_size
+            # For the smaller images (right side) - position below the image
+            picture_widget.labelText.pos = (0, -picture_widget.labelText.height)
         
         # Ensure it's properly centered
         if picture_widget == self.picture_1:
