@@ -166,7 +166,7 @@ class PicturesFrame(Widget):
         if picture_widget == self.picture_1:
             picture_widget.pic.size = self.left_image_size
             # For the main (left) image - position label at bottom left but raise it up
-            picture_widget.labelText.pos = (0, 40)  # Raise the text up from the bottom
+            # picture_widget.labelText.pos = (0, 0)  # Raise the text up from the bottom
         elif picture_widget in (self.picture_2, self.picture_past):
             picture_widget.pic.size = self.right_image_size
             # For the smaller images (right side) - position below the image
