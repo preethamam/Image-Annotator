@@ -83,7 +83,7 @@ After the dictionary folders are created, the files will be copied to the destin
 Keyboard shortcuts:
 `'w', 'a', 's', 'd', 'f', 'g', 'u', 'q', 'e', 'z'`
 
-To `Undo` an action, simply use `Ctrl+Z` and `Redo` by using the keyboard shortcut `Ctrl+Y`.
+To `Undo` an action, simply use `Ctrl + Z` or `Command ⌘ + Z` and `Redo` by using the keyboard shortcut `Ctrl + Y` or `Command ⌘ + Y`.
 
 ## Executable
 Unzip the `Executable.zip` file. In the Executable folder, find the `config.json` file and change the path of the source image folder in `sourceImageFolder` and `key_dict` keys and folder paths values. After changing the relevant paths and keys, double click the executable `Image Categorize.exe`.
