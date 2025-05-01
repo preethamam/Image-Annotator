@@ -27,13 +27,14 @@ Tested on Windows 10
 Python >= 2.7
 Kivy >= 1.0.6
 '''
-
+import os
 import json
 import ntpath
 import shutil
 from collections import deque
 from glob import glob
 from os.path import basename, exists, join
+from tkinter import Tk, filedialog
 
 import kivy
 from kivy.app import App
@@ -44,22 +45,59 @@ from kivy.uix.widget import Widget
 
 kivy.require('1.10.1')
 
-# Path to the config file
-CONFIG_FILE = "config.json"
-
+# Load configuration from JSON file
+# This function will open a file dialog to select the JSON file
+# and return the source image folder and key dictionary
+# The JSON file should contain the following structure:
+# {
+#     "sourceImageFolder": "path/to/source/folder",
+#     "key_dict": {
+#         "key1": "path/to/destination/folder1",
+#         "key2": "path/to/destination/folder2",
+#         ...
+#     }
+# }
 # Load configuration
 def load_config():
-    if exists(CONFIG_FILE):
+    # Create a Tkinter root window but hide it
+    root = Tk()
+    root.withdraw()
+    
+    # Set custom icon based on operating system
+    try:
+        if os.name == 'nt':  # Windows
+            icon_path = "app.ico"  # Replace with your Windows icon path
+            root.iconbitmap(icon_path)
+            root.tk.call('wm', 'iconbitmap', root._w, '-default', icon_path)
+        elif sys.platform == 'darwin':  # macOS
+            # macOS handles icons differently with tkinter
+            # You can set the application icon, but it won't affect individual dialogs
+            # in the same way as on Windows
+            from PIL import Image, ImageTk
+            icon = Image.open("icon.png")  # Use PNG for macOS
+            icon_image = ImageTk.PhotoImage(icon)
+            root.iconphoto(True, icon_image)
+    except Exception as e:
+        print(f"Could not set icon: {e}")
+    
+    # Open file dialog to select the JSON file
+    config_path = filedialog.askopenfilename(
+        title="Select JSON file",
+        filetypes=[("JSON files", "*.json"), ("All files", "*.*")]
+    )
+    
+    # If a file was selected
+    if config_path:
         try:
-            with open(CONFIG_FILE, 'r') as f:
+            with open(config_path, 'r') as f:
                 config = json.load(f)
                 return config["sourceImageFolder"], config["key_dict"]
         except Exception as e:
             print(f"Error loading config: {e}")
-            print("Please check your config.json file format")
+            print("Please check your JSON file format")
             return "", {}
     else:
-        print(f"Config file {CONFIG_FILE} not found. Please create it.")
+        print("No config file selected.")
         return "", {}
 
 # Load paths from config

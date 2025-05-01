@@ -5,10 +5,10 @@ block_cipher = None
 
 
 a = Analysis(
-    ['D:\\OneDrive\\Education Materials\\Team Work\\Team MillionCRACK\\Codebase\\2016-11-04 - Image Labeler - Zhiye Lu\\Classification Examples\\Python\\main.py'],
+    ['D:\\OneDrive\\Education Materials\\Applications\\Toolboxes\\Python\\My Functions\\Image Annotator\\Classification Examples\\Python\\main.py'],
     pathex=[],
     binaries=[],
-    datas=[('D:\\OneDrive\\Education Materials\\Team Work\\Team MillionCRACK\\Codebase\\2016-11-04 - Image Labeler - Zhiye Lu\\Classification Examples\\Python\\config.json', '.'), ('D:\\OneDrive\\Education Materials\\Team Work\\Team MillionCRACK\\Codebase\\2016-11-04 - Image Labeler - Zhiye Lu\\Classification Examples\\Python\\pictures.kv', '.'), ('D:\\OneDrive\\Education Materials\\Team Work\\Team MillionCRACK\\Codebase\\2016-11-04 - Image Labeler - Zhiye Lu\\Classification Examples\\Python\\icon.png', '.')],
+    datas=[('D:\\OneDrive\\Education Materials\\Applications\\Toolboxes\\Python\\My Functions\\Image Annotator\\Classification Examples\\Python\\pictures.kv', '.'), ('D:\\OneDrive\\Education Materials\\Applications\\Toolboxes\\Python\\My Functions\\Image Annotator\\Classification Examples\\Python\\app.ico', '.'), ('D:\\OneDrive\\Education Materials\\Applications\\Toolboxes\\Python\\My Functions\\Image Annotator\\Classification Examples\\Python\\icon.png', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -37,7 +37,7 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['D:\\OneDrive\\Education Materials\\Team Work\\Team MillionCRACK\\Codebase\\2016-11-04 - Image Labeler - Zhiye Lu\\Classification Examples\\Python\\app.ico'],
+    icon=['D:\\OneDrive\\Education Materials\\Applications\\Toolboxes\\Python\\My Functions\\Image Annotator\\Classification Examples\\Python\\app.ico'],
 )
 coll = COLLECT(
     exe,
