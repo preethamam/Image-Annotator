@@ -86,7 +86,7 @@ Keyboard shortcuts:
 To `Undo` an action, simply use `Ctrl + Z` or `Command ⌘ + Z` and `Redo` by using the keyboard shortcut `Ctrl + Y` or `Command ⌘ + Y`.
 
 ## Installer
-In the [Installer](Image-Annotator/Classification Examples/Installer/) folder, double-click the `Image Annotator.exe` follow the instructions for the installation. After the successful installation, `Image Annotator` Windows application can be started using the Start Menu or Desktop icon. The same [Installer](Image-Annotator/Classification Examples/Installer/) folder has a `config.json` JSON file. Before starting the `Image Annotator` Windows application, change the path of the source image folder in `sourceImageFolder` and `key_dict` keys and folder paths values in the `config.json` JSON file. After changing the relevant paths and keys, double click the `Image Annotator` Windows application icon. This should start the `Image Annotator` app.
+In the [Installer](Classification Examples/Installer/) folder, double-click the `Image Annotator.exe` follow the instructions for the installation. After the successful installation, `Image Annotator` Windows application can be started using the Start Menu or Desktop icon. The same [Installer](Classification Examples/Installer/) folder has a `config.json` JSON file. Before starting the `Image Annotator` Windows application, change the path of the source image folder in `sourceImageFolder` and `key_dict` keys and folder paths values in the `config.json` JSON file. After changing the relevant paths and keys, double click the `Image Annotator` Windows application icon. This should start the `Image Annotator` app.
 
 ```json
 {
