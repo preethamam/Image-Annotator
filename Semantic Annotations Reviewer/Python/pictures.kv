@@ -1,0 +1,29 @@
+#:kivy 1.0
+
+<ImageCell>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1  # White background
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<PicturesFrame>:
+    canvas.before:
+        # White background
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+        # Grid divider lines
+        Color:
+            rgba: 0.5, 0.5, 0.5, 1
+        # Vertical center line
+        Line:
+            points: [self.center_x, self.y, self.center_x, self.top]
+            width: 2
+        # Horizontal center line
+        Line:
+            points: [self.x, self.center_y, self.right, self.center_y]
+            width: 2
