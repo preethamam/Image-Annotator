@@ -6,7 +6,7 @@ A simple and light weight Python Kivy based software tool to label the multiclas
 ![overview](assets/overview.png)
 
 
-## semantic annotations reviewer
+## Semantic annotations reviewer tool
 A simple and light weight GUI application to review the semantic segmentation masks or object bounding boxes in comparison to the original image. This is a `2x2` grid layout GUI window which shows the annotated, original, next and previous images in the left top, bottom, right top and bottom grids.
 
 ![overview](assets/overview_semantic.png)
@@ -74,7 +74,7 @@ key_dict = {
 }
 ```
 
-JSON file change required (config.json):
+Image annotator JSON file change required (config.json):
 ```json
 {
     "sourceImageFolder": "H:\\Project MegaCRACK-RoboCRACK\\Real World Data\\USC PhD\\Classification\\Dataset 3 - Cracks-K (644 x 483) (Concrete and pavement)\\NoCrack",
@@ -89,6 +89,7 @@ JSON file change required (config.json):
 }
 ```
 
+Semantic annotations reviewer JSON file change required (config.json):
 ```json
 {
     "sourceImageFolder": "C:\\Users\\Preetham\\Downloads\\Anno",
@@ -109,7 +110,7 @@ To `Undo` an action, simply use `Ctrl + Z` or `Command ⌘ + Z` and `Redo` by us
 ## Installer
 In the [Installer](<Classification Examples/Installer>) folder, double-click the `Image Annotator.exe` or `Semantic Reviewer.exe` follow the instructions for the installation. After the successful installation, `Image Annotator` or `Semantic Reviewer` Windows application can be started using the Start Menu or Desktop icon. The same [Annotator Installer](<Classification Examples/Installer>) or [Semantic Reviewer Installer](<Semantic Annotations Reviewer/Installer>) folder has a `config.json` JSON file. Before starting the `Image Annotator` Windows application, change the path of the source image folder in `sourceImageFolder`, original images folder in `originalImageFolder`,  `key_dict` keys and folder paths values in the `config.json` JSON file in the respective folder. After changing the relevant paths and keys, double click the `Image Annotator` or `Semantic Reviewer` Windows application icon. This should start the `Image Annotator` or `Semantic Reviewer` app.
 
-JSON file change required (config.json):
+Image annotator JSON file change required (config.json):
 ```json
 {
     "sourceImageFolder": "H:\\Project MegaCRACK-RoboCRACK\\Real World Data\\USC PhD\\Classification\\Dataset 3 - Cracks-K (644 x 483) (Concrete and pavement)\\NoCrack",
@@ -124,6 +125,7 @@ JSON file change required (config.json):
 }
 ```
 
+Semantic annotations reviewer JSON file change required (config.json):
 ```json
 {
     "sourceImageFolder": "C:\\Users\\Preetham\\Downloads\\Anno",
