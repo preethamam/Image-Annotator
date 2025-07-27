@@ -5,7 +5,7 @@
 FloatLayout:
     canvas:
         Color:
-            rgb: 1,255,255
+            rgba: 0.094, 0.094, 0.094, 1
         Rectangle:
             source: 'data/images/background.jpg'
             size: self.size
@@ -76,6 +76,9 @@ FloatLayout:
         id: image
         source: root.source
 
+        # Color
+        color: (1, 1, 1, 1) if self.source else (0.094, 0.094, 0.094, 1)
+        
         # create initial image to be 400 pixels width
         size: 640, int(640 / self.image_ratio) if self.image_ratio and self.image_ratio > 0 else 640
 
@@ -87,7 +90,7 @@ FloatLayout:
     # Position the label at the bottom-left corner of the image
     Label:
         id: labelText
-        font_size: 25
+        font_size: 15
         color: 1, 1, 1, 1  # White color
         pos: 0, -self.height  # Position below the image
         text_size: image.width, None  # Constrain text width to image width

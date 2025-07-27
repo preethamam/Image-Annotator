@@ -124,6 +124,7 @@ class ImageCell(FloatLayout):
             size_hint=(0.85, 0.85),
             pos_hint={"center_x": 0.5, "center_y": 0.5},
         )
+        self.image.color = (0.961, 0.961, 0.961, 1)
         self.add_widget(self.image)
 
         # caption
@@ -541,7 +542,7 @@ class PicturesFrame(GridLayout):
 class PicturesApp(App):
     def build(self):
         Window.size = (1200, 800)
-        Window.clearcolor = (1, 1, 1, 1)
+        Window.clearcolor = (0.961, 0.961, 0.961, 1)
         return PicturesFrame()
 
 
